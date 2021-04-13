@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Brute Force",
+    "mtg_name": "Brute Force",
+    "cost": "R",
+    "mana": ["r"],
+    "value": 1,
+    "type": "instant",
+    "description": "For the next action, one target ally deals 1d6 extra damage."
+  },
+  {
+    "name": "Burst Lightning",
+    "mtg_name": "Burst Lightning",
+    "cost": "R",
+    "mana": ["r"],
+    "value": 1,
+    "type": "instant",
+    "canBeReforced": true,
+    "reforceMana": ["4"],
+    "description": "May be reforced by paying %reforce. Deals 2d6 damage to a target. If reforced, deals 4d6 instead. This reforced spell cannot be countered."
+  },
+  {
+    "name": "Crush",
+    "mtg_name": "Crush",
+    "cost": "R",
+    "mana": ["r"],
+    "value": 1,
+    "type": "instant",
+    "description": "Destroy an artifact (object) on scene (success on a MAG saving throw)."
+  },
+  {
+    "name": "Dual Shot",
+    "mtg_name": "Dual Shot",
+    "cost": "R",
+    "mana": ["r"],
+    "value": 1,
+    "type": "instant",
+    "description": "Deal 1d6 damage to up to 2 targets (Roll once for each target)."
+  },
+  {
+    "name": "Electrickery",
+    "mtg_name": "Electrickery",
+    "cost": "R",
+    "mana": ["r"],
+    "value": 1,
+    "type": "instant",
+    "isOverload": true,
+    "overloadMana": ["1", "r"],
+    "description": "May be overloaded by paying %overload. Deal 1d6 damage to one target. If overloaded, roll MAG. If success, deal 1d6 to each and every enemy on field, otherwise, the damage is dealt to everyone, even allies."
+  }
+]
