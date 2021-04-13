@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import Home from './pages/Home';
+import Library from './pages/Library';
 import './index.css'
 
 function App () {
@@ -18,10 +19,16 @@ function App () {
             <li>
               <Link to="/">Home</Link>
             </li>
+            <li>
+              <Link to="/library">Library</Link>
+            </li>
           </ul>
         </nav>
 
         <Switch>
+          <Route path="/library">
+            <Library />
+          </Route>
           <Route path="/">
             <Home />
           </Route>

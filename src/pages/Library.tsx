@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import debounce from 'lodash.debounce';
 import { TextField } from "@material-ui/core";
-import Library from '../db/Spells.json'
-import AutoComplete from "./cardAutocomplete";
-import SpellList from "./spellList";
+import SpellLibrary from '../db/SpellLibrary.json'
+import AutoComplete from "../components/cardAutocomplete";
+import SpellList from "../components/spellList";
 
-const DefaultInput: React.FC = () => {
+const Library: React.FC = () => {
   const [cards, setCards] = useState<any[]>([]);
   const [spellList, setSpellList] = useState<any[]>([]);
   const [value, setValue] = useState<string>("");
@@ -14,7 +14,7 @@ const DefaultInput: React.FC = () => {
 
   function findACard(cardName: string) {
     setCards([]);
-    const foundSpells = Library.filter(spell => spell.name.toLowerCase().indexOf(cardName.toLowerCase()) > -1)
+    const foundSpells = SpellLibrary.filter(spell => spell.name.toLowerCase().indexOf(cardName.toLowerCase()) > -1)
     return cardName.length > 3 && setCards(foundSpells ? foundSpells : [])
   }
 
@@ -33,8 +33,9 @@ const DefaultInput: React.FC = () => {
 
   return (
     <div>
-      <div style={{ position: 'relative' }}>
+      <div>
         <TextField
+          style={{ position: 'relative' }}
           id="filled-basic"
           label="Select a Spell"
           variant="filled"
@@ -51,4 +52,4 @@ const DefaultInput: React.FC = () => {
   );
 };
 
-export default DefaultInput;
+export default Library;
