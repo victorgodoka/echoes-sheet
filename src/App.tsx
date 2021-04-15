@@ -3,29 +3,25 @@ import '../node_modules/mana-font/css/mana.min.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './pages/Home';
 import Library from './pages/Library';
+import Create from './pages/Create';
 import './index.css'
+import Navbar from './components/navbar';
+import "@saeris/typeface-beleren-bold"
 
-function App () {
+function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/library">Library</Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
 
         <Switch>
+          <Route path="/new">
+            <Create />
+          </Route>
           <Route path="/library">
             <Library />
           </Route>

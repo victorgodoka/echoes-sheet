@@ -135,6 +135,16 @@ table {
 }
 
 /* Default */
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+  background: url('./assets/imgs/background.png') center center no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
 }
